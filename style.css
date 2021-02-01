@@ -58,7 +58,7 @@
 .homesec{
     width: 100vw;
     height: 500px;
-    background: url(../image/home.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(../image/home.jpg);
     background-position: center;
     background-size: cover;
     color: white;
