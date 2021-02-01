@@ -58,7 +58,6 @@
 .homesec{
     width: 100vw;
     height: 500px;
-    background-color: blueviolet;
     background-image: url(/image/home.jpg);
     background-position: center;
     background-size: cover;
