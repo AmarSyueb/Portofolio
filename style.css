@@ -58,7 +58,7 @@
 .homesec{
     width: 100vw;
     height: 500px;
-    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(../image/home.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8d29ya3NwYWNlfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80);
     background-position: center;
     background-size: cover;
     color: white;
@@ -71,6 +71,10 @@
 .homecontent{
     display: flex;
     flex-direction: column;
+    animation-name: popup;
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-fill-mode: backwards;
 }
 .homecontent h1{
     font-family: 'Poppins', sans-serif;
@@ -79,6 +83,16 @@
 .homecontent p{
     font-family: 'Hind Siliguri', sans-serif;
     font-size: 20px;
+}
+@keyframes popup {
+    0%{
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* About Section */
