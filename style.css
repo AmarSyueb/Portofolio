@@ -188,15 +188,18 @@
 }
 @media(max-width: 440px){
     .aboutsec{
-        height: 1300px;
+        height: 900px;
+    }
+    .description p{
+        font-size: 15px;
     }
 }
-@media(max-width: 389px){
+@media(max-width: 398px){
     .description p{
-        font-size: 14px;
+        font-size: 15px;
     }
     .aboutsec{
-        height: 1350px;
+        height: 1100px;
     }
     .myphoto span{
         text-align: center;
