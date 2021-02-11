@@ -7,24 +7,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Hind+Siliguri&family=Poppins:wght@500&family=Yusei+Magic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="js-style.js"></script>
     <title>My Portofolio</title>
 </head>
 <body>
     <header class="navigation">
         <nav>
             <ul>
-                <li>
-                    <a href="#home">Home</a>
+                <li id="linkhome" class="navlink">
+                    <a href="#home" onclick="changeColor(0)">Home</a>
                 </li>
             </ul>
         </nav>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#product">Products</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li id="linkabout" class="navlink"><a href="#about" onclick="changeColor(1)">About</a></li>
+                <li id="linkproduct" class="navlink"><a href="#product" onclick="changeColor(2)">Products</a></li>
+                <li id="linkteam" class="navlink"><a href="#team" onclick="changeColor(3)">Team</a></li>
+                <li id="linkblog" class="navlink"><a href="#blog" onclick="changeColor(4)">Blog</a></li>
+                <li id="linkcontact" class="navlink"><a href="#contact" onclick="changeColor(5)">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -62,22 +63,22 @@
         <h2 class="titlestyle">Team</h2>
         <div class="teamcontent">
             <div class="teamphoto">
-                <img src="image/team1.jpg" alt="">
+                <img src="image/team1.jpg" alt="" onclick="popUp(1)">
                 <h3>Fred</h3>
                 <span>Developer</span>
             </div>
             <div class="teamphoto">
-                <img src="image/team2.jpg" alt="">
+                <img src="image/team2.jpg" alt="" onclick="popUp(2)">
                 <h3>Jim</h3>
                 <span>Designer</span>
             </div>
             <div class="teamphoto">
-                <img src="image/team3.jpg" alt="">
+                <img src="image/team3.jpg" alt="" onclick="popUp(3)">
                 <h3>Bob</h3>
                 <span>Planner</span>
             </div>
             <div class="teamphoto">
-                <img src="image/team4.jpg" alt="">
+                <img src="image/team4.jpg" alt="" onclick="popUp(4)">
                 <h3>Sarah</h3>
                 <span>Network</span>
             </div>
@@ -125,6 +126,11 @@
                     <input class="submitinput" type="submit">
                 </form>
             </div>
+        </div>
+    </section>
+    <section id="photopop" onclick="popOut()">
+        <div id="popupcontent">
+            <img id="popupimg" src="image/team1.jpg" alt="">
         </div>
     </section>
 </body>
