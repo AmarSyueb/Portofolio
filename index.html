@@ -10,18 +10,19 @@
     <script src="js-style.js"></script>
     <title>My Portofolio</title>
 </head>
+
 <body>
-    <header class="navigation">
+    <header id="navigatornya" class="navigation">
         <nav>
             <ul>
                 <li id="linkhome" class="navlink">
-                    <a href="#home" onclick="changeColor(0)">Home</a>
+                    <a  href="#home" onclick="changeColor(0)">Home</a>
                 </li>
             </ul>
         </nav>
         <nav>
             <ul>
-                <li id="linkabout" class="navlink"><a href="#about" onclick="changeColor(1)">About</a></li>
+                <li id="linkabout" class="navlink"><a  href="#about" onclick="changeColor(1)">About</a></li>
                 <li id="linkproduct" class="navlink"><a href="#product" onclick="changeColor(2)">Products</a></li>
                 <li id="linkteam" class="navlink"><a href="#team" onclick="changeColor(3)">Team</a></li>
                 <li id="linkblog" class="navlink"><a href="#blog" onclick="changeColor(4)">Blog</a></li>
@@ -39,12 +40,12 @@
         <h2 class="titlestyle">About Me</h2>
         <div class="aboutcontent">
             <div class="myphoto">
-                <img src="image/foto.jpg" class="myphoto" alt="">
+                <img id="mainphoto" src="image/foto.jpg" class="myphoto" alt="" onclick="popUp(0)">
                 <span>Main Developer</span>
             </div>
             <div class="description">
                 <h2>Muhamad Marasyi Syueb</h2>
-                <p>Hello my name is Amar, and I am a computer geek that have a huge passion in software engineering and web developement. I've spent quite a lot of time gathering information through online means to try and build my coding skill and most of them are web development. Though I'm still learning a lot, I've got a good grasp in HTML and CSS coding. And also a little bit of JS wouldn't hurt. So here it is, most of my web design training that I've done presented below.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consequuntur, iure, rerum quod accusantium omnis adipisci perspiciatis fugiat impedit iste excepturi, molestias veritatis beatae commodi. Error, veniam ullam reprehenderit minima sit sequi explicabo ea harum facere accusantium fugit ut molestiae vero libero modi. Explicabo nesciunt consequatur nam ipsum eius, minima tempora facere voluptates reprehenderit at, eaque vitae possimus commodi ab eligendi quae exercitationem ea similique nostrum sit modi quod laudantium, quam perspiciatis. Maxime porro itaque enim? Amet, rem, incidunt error ad facere saepe deleniti nemo ex dignissimos pariatur nostrum. Eaque?</p>
             </div>
         </div>
     </section>
@@ -90,20 +91,14 @@
             <a class="bloglink" href=""><div class="blogcard">
                 <img class="blogphoto" src="image/blog1.jpg" alt="">
                 <span>News 1</span>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p class="linkweb">Read More</p>
             </div></a>
             <a class="bloglink" href=""><div class="blogcard">
                 <img class="blogphoto" src="image/blog2.jpg" alt="">
                 <span>News 2</span>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p class="linkweb">Read More</p>
             </div></a>
             <a class="bloglink" href=""><div class="blogcard">
                 <img class="blogphoto" src="image/blog3.jpg" alt="">
                 <span>News 3</span>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p class="linkweb">Read More</p>
             </div></a>
         </div>
     </section>
@@ -129,9 +124,13 @@
         </div>
     </section>
     <section id="photopop" onclick="popOut()">
-        <div id="popupcontent">
-            <img id="popupimg" src="image/team1.jpg" alt="">
+        <div class="popOut">
+            <i class="fas fa-times fa-3x" onclick="popOut()"></i>
+        </div>
+        <div class="imagePop">
+            <img id="imgprop" src="image/team3.jpg" alt="" srcset="">
         </div>
     </section>
 </body>
+
 </html>

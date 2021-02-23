@@ -4,6 +4,9 @@
     scroll-behavior: smooth;
 }
 /* Navbar */
+#navigatornya{
+    background-color: rgb(255, 94, 0);
+}
 .navigation{
     display: flex;
     flex-direction: row;
@@ -11,7 +14,7 @@
     width: 100vw;
     height: 50px;
     color: white;
-    background-color: rgb(255, 94, 0);
+    
     position: fixed;
     
 }
@@ -29,19 +32,19 @@
     text-align: center;
     margin: 0px 20px;
 }
-.navigation li {
+.navlink {
+    background-color: rgb(255, 94, 0);
     width: 80px;
     height: 35px;
     padding-top: 15px;
 }
-
-#linkhome, #linkabout, #linkproduct, #linkteam, #linkblog, #linkcontact{
+#linkhome, #linkabout, #linkproduct, #linkteam, #linkblog, #linkcontact {
     background-color: transparent;
+    transition: .2s all;
 }
 #linkhome:hover, #linkabout:hover, #linkproduct:hover, #linkteam:hover, #linkblog:hover, #linkcontact:hover{
     background-color: rgb(99, 0, 0)!important;
 }
-
 
 /* Media Query of Navigation */
 @media(max-width: 559px){
@@ -62,7 +65,8 @@
 .homesec{
     width: 100vw;
     height: 500px;
-    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8d29ya3NwYWNlfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80);
+    background-color: blueviolet;
+    background-image: url(/image/home.jpg);
     background-position: center;
     background-size: cover;
     color: white;
@@ -75,10 +79,6 @@
 .homecontent{
     display: flex;
     flex-direction: column;
-    animation-name: popup;
-    animation-duration: 2s;
-    animation-delay: .5s;
-    animation-fill-mode: backwards;
 }
 .homecontent h1{
     font-family: 'Poppins', sans-serif;
@@ -87,16 +87,6 @@
 .homecontent p{
     font-family: 'Hind Siliguri', sans-serif;
     font-size: 20px;
-}
-@keyframes popup {
-    0%{
-        transform: translateY(-30px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-    }
 }
 
 /* About Section */
@@ -184,7 +174,7 @@
 }
 @media(max-width: 515px){
     .aboutsec{
-        height: 900px;
+        height: 1000px;
     }
     .description p{
         font-size: 14px;
@@ -192,29 +182,18 @@
 }
 @media(max-width: 440px){
     .aboutsec{
-        height: 900px;
-    }
-    .description p{
-        font-size: 15px;
+        height: 1300px;
     }
 }
-@media(max-width: 398px){
+@media(max-width: 389px){
     .description p{
-        font-size: 15px;
+        font-size: 14px;
     }
     .aboutsec{
-        height: 1100px;
+        height: 1350px;
     }
     .myphoto span{
         text-align: center;
-    }
-}
-@media(min-width: 1367px){
-    .description h2{
-        font-size: 36px;
-    }
-    .description p{
-        font-size: 20px;
     }
 }
 /* END of Media Query About */
@@ -302,7 +281,7 @@
     font-family: 'Yusei Magic', sans-serif;
 }
 .teamphoto img:hover{
-    transition: .5s all;
+    transition: .5s all ease-in-out;
     border-radius: 110px;
     cursor: pointer;
 }
@@ -370,27 +349,21 @@
 }
 .blogcard{
     width: 300px;
-    height: 215px;
-    background-color: rgb(255, 106, 60);
+    height: 200px;
+    background-color: crimson;
     display: flex;
     flex-direction: column;
     margin: 0 20px;
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    box-shadow: 0 0 10px #000000;
 }
 .blogcard:hover{
-    background-color: rgb(190, 70, 0);
+    background-color: rgb(87, 1, 30);
     cursor: pointer;
     transition: .2s all;
     border-radius: 10px;
 }
-.linkweb:hover{
-    opacity: .7;
-    transition: .2s all;
-}
 .blogcard span{
-    margin-top: 6px;
+    margin-top: 12px;
 }
 .blogphoto{
     width: 300px;
@@ -424,7 +397,7 @@
 @media(min-width: 1367px){
     .blogcard{
         width: 400px;
-        height: 265px;
+        height: 250px;
     }
     .blogphoto{
         width: 400px;
@@ -460,59 +433,67 @@
     margin-bottom: 5px;
     outline: none;
     padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 .textinput{
     margin-bottom: 8px;
     outline: none;
     padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 .submitinput{
     padding: 5px;
-    background-color: orange;
-    border: 1px solid  black;
-    outline: none;
 }
 .submitinput:hover{
     cursor: pointer;
-    background-color: orangered;
-    color: white;
-    transition: .2s all;
-
 }
 .contactlogo{
     color: white;
+    transition: transform .2s;
     margin-right: 5px;
 }
 .contactlogo:hover{
-    color: rgb(211, 211, 211);
+    -ms-transform: scale(4); /* IE 9 */
+  -webkit-transform: scale(4); /* Safari 3-8 */
+  transform: scale(4); 
 }
 .label{
     margin-bottom: 3px;
 }
-/* PopUp Page */
+
+/* Photo Pop Up Page*/
 #photopop{
-    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    position: fixed;
     width: 100vw;
     height: 100vh;
-    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    display:none;
 }
-
-#popupcontent{
+.imagePop{
+    transition: .2s ease-in;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    height: 100vh;
+    margin: auto;
 }
-
-#popupimg{
+.popOut{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 10vh;
+    margin-left: 64vw;
+    width: 50px;
+    color: white;
+}
+.popOut:hover{
+    opacity: .7;
+    cursor: pointer;
+    transition: .2s all;
+}
+#imgprop{
     width: 400px;
     height: 400px;
+    margin: auto;
     border-radius: 5px;
 }
